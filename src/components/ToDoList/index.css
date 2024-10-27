@@ -1,0 +1,31 @@
+.todoList_container{
+    width: 80%;
+    margin-top: 150px;
+    padding: 5%;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    box-shadow: rgba(255, 234, 0, 0.25) 0px 54px 55px, rgba(255, 0, 0, 0.12) 0px -12px 30px, rgba(255, 174, 0, 0.655) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Button{
+    background: linear-gradient(90deg, #0d00ff, #ff00e696); 
+    border: 1px solid #ffffff; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.Button:hover{
+    background: linear-gradient(90deg, #1900ff, #ff08fb); 
+}
+.Buttons{
+    background-color: #00000059;
+    border-radius: 12px;
+    padding: 20px;
+    width: 50%;
+}
+.todo{
+    width: 100%;
+    height: 70px;
+    background-color: #00000059;
+    border-radius: 12px;
+    padding: 10px;
+}
