@@ -1,8 +1,6 @@
 import { VISIBILITY_FILTERS } from "../core/utilis/constants";
-import { useSelector } from "react-redux";
 
-const getTodosByVisibilityFilter = (store, visibilityFilter) => {
-const allTodos = useSelector((store) => store.todoList.value);
+const getTodosByVisibilityFilter = (allTodos, visibilityFilter) => {
 switch (visibilityFilter) {
     case VISIBILITY_FILTERS.COMPLETED:
       return allTodos.filter(todo => todo.completed);

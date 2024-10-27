@@ -7,14 +7,24 @@ export const todoListSlice = createSlice({
     },
     reducers: {
         addToDo: (state, action) => {
-            state.push({
+            state.value.push({
                 name: action.payload,
-                done:false
+                index: state.value.length,
+                completed:false,
             });
         },
         deleteToDo: (state, action) => {
-            state.splice(action.payload,action.payload+1);
+            state.value = state.value.filter((_, index) => index !== action.payload);
+        },
+        changeCompletedState: (state,action) => {
+            state.value.forEach((item)=>{
+                if(action.payload===item.index){
+                    item.completed = !item.completed
+                }
+            })
         }
-        
     }
-})
+});
+
+export default todoListSlice.reducer;
+export const { addToDo, deleteToDo, changeCompletedState } = todoListSlice.actions;
